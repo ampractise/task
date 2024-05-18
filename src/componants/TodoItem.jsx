@@ -29,11 +29,11 @@ function TodoItem({ todo }) {
       />
       <input
         type="text"
-        className={`border outline-none w-full bg-transparent rounded-lg 
+        className={`border outline-none w-full rounded-lg 
         ${
           isTodoEditable
-            ? "border-black/10 px-2 bg-slate-100"
-            : "border-transparent"
+            ? "border-black/10 px-2 bg-slate-100 bg-white-300"
+            : "border-transparent bg-transparent"
         } ${todo.completed ? "line-through" : ""}`}
         value={todoMsg}
         onChange={(e) => setTodoMsg(e.target.value)}

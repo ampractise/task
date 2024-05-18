@@ -30,7 +30,7 @@ function App() {
 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"));
-
+    todos.sort((a,b) => a.completed -b.completed);
     if (todos && todos.length > 0) {
       setTodos(todos);
     }
